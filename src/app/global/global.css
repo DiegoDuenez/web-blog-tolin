@@ -1,0 +1,44 @@
+
+
+:root{
+    --verde: #00917C;
+    --azul-100: #1aa7ce;
+    --azul-200: #1687A7;
+    --gris: #F6F5F5;
+    --negro: #222831;
+    --gris: rgb(160, 160, 160);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+        -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+        -webkit-padding-start: 0px;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    position: relative;
+    overflow-x: hidden !important;
+}
+
+body>div {
+    overflow: hidden !important;
+}
+body>section {
+    overflow: hidden !important;
+}
