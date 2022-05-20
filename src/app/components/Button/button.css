@@ -7,6 +7,7 @@
     padding: 0.5rem 1rem 0.5rem 1rem;
     font-weight: bold;
     color:black;
+    transition: 400ms;
 }
 
 .button--block{
@@ -17,4 +18,8 @@
 .button--verde{
     background-color: var(--verde);
     color: white;
+}
+
+.button--verde:hover{
+    background-color: var(--verde-200);
 }
