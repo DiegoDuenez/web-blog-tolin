@@ -20,7 +20,7 @@ class Register extends Component{
                 <h2 className="register__title">Crear cuenta nueva</h2>
                 <form className="register__form">
                     <Input type="text" placeholder="Ingresa un nombre de usuario" focus={true}/>
-                    <Input type="text" placeholder="Ingresa tu correo"/>
+                    <Input type="email" placeholder="Ingresa tu correo"/>
                     <Input type="password" placeholder="Ingresa tu contraseña"/>
                     <Input type="password" placeholder="Repite tu contraseña"/>
                 </form>

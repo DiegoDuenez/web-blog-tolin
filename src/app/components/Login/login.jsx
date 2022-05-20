@@ -12,8 +12,10 @@ import './login.css';
 class Login extends Component{
 
     render(){
+
+        var buttonClasses = " button--block"
+
         return ( 
-            
             <div className="login__container">
 
                 <h2 className="login__title">Login</h2>
@@ -21,13 +23,14 @@ class Login extends Component{
                     <Input type="text" placeholder="Ingresa tu correo" focus={true}/>
                     <Input type="password" placeholder="Ingresa tu contraseña"/>
                 </form>
-           
-               <div className="login__footer">
+        
+            <div className="login__footer">
+                    <Button type="submit" classes={buttonClasses} text="Iniciar Sesión"/>
                     <Link to="/registro" className="register__link">Crear cuenta</Link>
-                    <Button type="submit" text="Iniciar Sesión"/>
-               </div>
+            </div>
 
             </div>
+
         )
     }
 
