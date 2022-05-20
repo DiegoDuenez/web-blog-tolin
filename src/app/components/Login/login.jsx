@@ -18,7 +18,7 @@ class Login extends Component{
         return ( 
             <div className="login__container">
 
-                <h2 className="login__title">Login</h2>
+                <h2 className="login__title">Iniciar Sesión</h2>
                 <form className="login__form">
                     <Input type="text" placeholder="Ingresa tu correo" focus={true}/>
                     <Input type="password" placeholder="Ingresa tu contraseña"/>
