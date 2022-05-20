@@ -6,6 +6,8 @@ import './index.css';
 import App from './App';
 import Navbar from './app/components/Navbar/navbar';
 import Login from './app/components/Login/login';
+import Landing from './app/components/LandingPage/landing-page';
+
 import Register from './app/components/Register/register';
 
 import { BrowserRouter,Routes,Route } from "react-router-dom";
@@ -16,7 +18,8 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Login />}/>
+        <Route index  element={<Landing />}/>
+        <Route path='/login' element={<Login />}/>
         <Route path="/registro" element={<Register />} />
       </Routes>
     </BrowserRouter>

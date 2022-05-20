@@ -13,7 +13,9 @@ class Login extends Component{
 
     render(){
         return ( 
+            
             <div className="login__container">
+
                 <h2 className="login__title">Login</h2>
                 <form className="login__form">
                     <Input type="text" placeholder="Ingresa tu correo" focus={true}/>

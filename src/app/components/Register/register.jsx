@@ -26,7 +26,7 @@ class Register extends Component{
                 </form>
                <div className="register__footer">
                     <Button type="submit" classes={buttonClasses} text="Registrarse"/>
-                    <Link to="/" className="register__link">Ya tengo una cuenta</Link>
+                    <Link to="/login" className="register__link">Ya tengo una cuenta</Link>
                </div>
 
 
