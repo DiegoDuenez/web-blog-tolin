@@ -13,7 +13,7 @@ class Register extends Component{
 
     render(){
 
-        var buttonClasses = " button--block"
+        var buttonClasses = "button--verde button--block"
 
         return ( 
            <div className="register__container">

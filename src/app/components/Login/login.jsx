@@ -13,7 +13,7 @@ class Login extends Component{
 
     render(){
 
-        var buttonClasses = " button--block"
+        var buttonClasses = "button--verde button--block"
 
         return ( 
             <div className="login__container">
