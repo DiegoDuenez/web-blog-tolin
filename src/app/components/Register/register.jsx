@@ -1,6 +1,8 @@
 import {React, Component } from "react";
 import { Link } from "react-router-dom";
 
+import logo from '../../img/logo.png';
+
 import Input from '../Input/input';
 import Button from '../Button/button';
 
@@ -17,6 +19,13 @@ class Register extends Component{
 
         return ( 
            <div className="register__container">
+
+               <div className="logo">
+                    <Link to="/">
+                        <img src={ logo } alt="BlogHub" title="😎🎸" />
+                    </Link>
+                </div>
+
                 <h2 className="register__title">Crear cuenta nueva</h2>
                 <form className="register__form">
                     <Input type="text" placeholder="Ingresa un nombre de usuario" focus={true}/>

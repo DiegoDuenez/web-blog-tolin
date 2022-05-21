@@ -1,6 +1,8 @@
 import {React, Component } from "react";
 import { Link } from "react-router-dom";
 
+import logo from '../../img/logo.png';
+
 import Input from '../Input/input';
 import Button from '../Button/button';
 
@@ -17,6 +19,12 @@ class Login extends Component{
 
         return ( 
             <div className="login__container">
+
+                <div className="logo">
+                    <Link to="/">
+                        <img src={ logo } alt="BlogHub" title="😎🎸" />
+                    </Link>
+                </div>
 
                 <h2 className="login__title">Iniciar Sesión</h2>
                 <form className="login__form">

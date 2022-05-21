@@ -4,22 +4,36 @@
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    padding: 0.8rem 1rem 0.8rem 1rem;
     font-weight: bold;
     color:black;
     transition: 400ms;
+}
+
+.button--big{
+    padding: 1rem 2rem 1rem 2rem;
+    font-size: 1.2rem;
+
 }
 
 .button--block{
     width: 100%;
 }
 
-
 .button--verde{
     background-color: var(--verde);
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .button--verde:hover{
     background-color: var(--verde-200);
 }
+
+.button--white{
+    background-color: white;
+    color: var(--verde);
+}
+/*
+.button--white:hover{
+    background-color: var(--gris);
+}*/

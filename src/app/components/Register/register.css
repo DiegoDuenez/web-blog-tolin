@@ -13,7 +13,7 @@
     width:30rem;
     border: 1px solid var(--gris);
     box-shadow: 0 15px 70px -10px rgb(0, 0, 0);
-    margin: 5% auto;
+    margin: 8rem auto;
 }
 
 .register__form{
@@ -42,4 +42,14 @@
 
 .register__title{
     color: var(--verde);
+}
+
+.logo{
+    position: absolute;
+    top: 2rem;
+    left: 0;
+}
+
+.logo img{
+    width: 50%;
 }

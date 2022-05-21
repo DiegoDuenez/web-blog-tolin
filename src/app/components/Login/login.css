@@ -17,7 +17,7 @@
     padding: 2rem;
     gap: 2rem;
     width:30rem;
-    margin: 5% auto;
+    margin: 8rem auto;
     /*position: absolute;
     right: 5rem;
     top: 30%;*/
@@ -51,4 +51,14 @@
 
 .login__title{
     color: var(--verde);
+}
+
+.logo{
+    position: absolute;
+    top: 2rem;
+    left: 0;
+}
+
+.logo img{
+    width: 50%;
 }
