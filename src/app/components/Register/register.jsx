@@ -5,6 +5,7 @@ import logo from '../../img/logo.png';
 
 import Input from '../Input/input';
 import Button from '../Button/button';
+import Background from "../Background/background";
 
 import '../../global/global.css';
 import './register.css';
@@ -19,6 +20,8 @@ class Register extends Component{
 
         return ( 
            <div className="register__container">
+
+                <Background/>
 
                <div className="logo">
                     <Link to="/">

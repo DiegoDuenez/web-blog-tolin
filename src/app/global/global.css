@@ -38,9 +38,9 @@ html{
 body{
     position: relative;
     overflow-x: hidden !important;
-    background-image: url('../img/office.jpg');
+    /*background-image: url('../img/office.jpg');
     background-position: center;
-    background-size: cover;
+    background-size: cover;*/
 }
 
 body>div {
