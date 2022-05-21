@@ -1,0 +1,53 @@
+
+.card{
+    display: flex;
+    height: fit-content;
+   /* min-width: 30rem;*/
+    border: 1px solid var(--gris);
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 1rem;
+   /* max-width: 100%;*/
+   width: 100%;
+
+}
+
+.card__header{
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+}
+
+.card__info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 80%;
+}
+
+.card__user{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card__user img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.card__user p{
+    white-space: none;
+    font-size: 0.8rem;
+}
+
+.card__footer{
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    align-items: center;
+}
