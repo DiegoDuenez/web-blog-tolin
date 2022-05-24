@@ -63,7 +63,6 @@ class Home extends Component{
                     <div className="home__container home__container--column">
                         <TopList title="Blogs más populares"/>
                         <TopList title="Categorías más populares"/>
-
                     </div>
 
                 </div>
