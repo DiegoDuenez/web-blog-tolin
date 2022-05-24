@@ -1,12 +1,15 @@
 
 
 :root{
-    --verde: #00917C;
+    --verde: rgb(0, 145, 124);
     --azul-100: #1aa7ce;
     --azul-200: #1687A7;
     --gris: #F6F5F5;
     --negro: #222831;
     --gris: rgb(160, 160, 160);
+
+    --verde-200: #047060;
+
 }
 
 
@@ -16,6 +19,7 @@
         -webkit-box-sizing: border-box;
     box-sizing: border-box;
         -webkit-padding-start: 0px;
+    font-family: 'Roboto', sans-serif;
 }
 
 html,
@@ -34,6 +38,9 @@ html{
 body{
     position: relative;
     overflow-x: hidden !important;
+    /*background-image: url('../img/office.jpg');
+    background-position: center;
+    background-size: cover;*/
 }
 
 body>div {
@@ -41,4 +48,24 @@ body>div {
 }
 body>section {
     overflow: hidden !important;
+}
+
+
+h6{
+    font-size: 1rem;
+}
+h5{
+    font-size: 1.2rem;
+}
+h4{
+    font-size: 1.5rem;
+}
+h3{
+    font-size: 2rem;
+}
+h2{
+    font-size: 2.5rem;
+}
+h1{
+    font-size: 3.5rem;
 }

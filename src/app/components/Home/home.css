@@ -1,0 +1,12 @@
+
+
+.home__scroll{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow-y: scroll;
+    width: 40rem;
+    margin: 2.5rem auto;
+    height: 35rem;
+    padding: 1rem;
+}
