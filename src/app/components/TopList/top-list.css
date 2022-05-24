@@ -1,0 +1,98 @@
+
+
+.top-list{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 17rem;
+    /*position: absolute;
+    top: 7rem;
+    right: 3rem;*/
+    border: 1px solid var(--azul-100);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-right: 3rem;
+}
+
+
+
+
+.top-list__header{
+    text-align: center;
+    background-color: var(--azul-100);
+    width: 100%;
+    height: fit-content;
+    padding: 1rem;
+    color: white;
+    border-bottom: 5px solid var(--azul-200);
+}
+
+
+.top-list__item{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+.top-list__phill{
+    background-color: var(--azul-100);
+    border-radius: 10px;
+    padding: 0.5rem;
+    color: white;
+    width: fit-content;
+}
+
+
+.top-list__phill--gold{
+    background-color: var(--gold);
+    color: rgb(0, 0, 0);
+}
+
+.top-list__phill--silver{
+    background-color: var(--silver);
+    color: rgb(0, 0, 0);
+}
+
+.top-list__phill--bronze{
+    background-color: var(--bronze);
+    color: white;
+}
+
+
+
+.top-list__text{
+    width: 230px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+.top-list::-webkit-scrollbar {
+    width: 7px;
+}
+  
+.top-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+.top-list::-webkit-scrollbar-thumb {
+    background: var(--azul-100);
+    transition: 400ms;
+}
+  
+.top-list::-webkit-scrollbar-thumb:hover {
+    background: var(--azul-200);
+}
+
+
+/*
+.fa-gradient {
+	background: -webkit-gradient(linear, left top, left bottom, from(#f00), to(rgb(239, 221, 13)));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}*/

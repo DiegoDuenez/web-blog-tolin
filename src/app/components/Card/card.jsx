@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import Background from "../Background/background";
 
+import mexico from '../../img/svg/mexico.svg';
+
 import '../../global/global.css';
 import './card.css';
 
