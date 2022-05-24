@@ -6,9 +6,11 @@ class Navbar extends Component{
     render(){
         return (
         <nav className="navbar">
-            <a className="navbar__link" href="#">
+            <a className="navbar__link" >
                 Categorías
             </a>
+
+
 
             <div className="navbar__input-group">
                 <input type="search" name="" id="" className="navbar__input" placeholder="Buscar..."/>
