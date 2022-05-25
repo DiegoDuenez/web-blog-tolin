@@ -9,6 +9,7 @@ import Card from '../Card/card';
 
 import '../../global/global.css';
 import './home.css';
+import Background from "../Background/background";
 
 
 
