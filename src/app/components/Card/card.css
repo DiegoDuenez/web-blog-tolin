@@ -29,6 +29,13 @@
     width: 80%;
 }
 
+.card__info p{
+    width: 300px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 .card__user{
     display: flex;
     flex-direction: column;

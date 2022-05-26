@@ -35,7 +35,7 @@ class Home extends Component{
                         <Card 
                             imgUser="https://101noticias.com/wp-content/uploads/2022/05/220428154319-mark-zuckerberg-file-2021-super-tease.jpg"
                             title="Facebook"
-                            desc="Hola soy Mark, depositame $5000"
+                            desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolores quas, ullam doloribus vel illum ex quasi animi odit! Blanditiis ipsa provident, inventore accusantium sapiente natus quibusdam facere reiciendis dolore!                            "
                             date="21 - Mayo - 2022"
                             user="@markZuckenberg"
                         />

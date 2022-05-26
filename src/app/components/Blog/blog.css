@@ -1,0 +1,54 @@
+
+
+.blog__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 3rem auto;
+    gap: 2rem;
+}
+
+.blog__main{
+    display: flex;
+    height: fit-content;
+    border: 1px solid var(--gris-200);
+    flex-direction: column;
+    padding: 3rem;
+   width: 100%;
+   transition: 400ms;
+   gap: 2rem;
+}
+
+.blog__text{
+    line-height: 1.5rem;
+}
+
+.blog__header{
+    display: flex;
+    align-items: center;
+    gap: 1rem
+}
+
+.blog__user{
+    width: 5rem;
+    height: 5rem;
+    background: url('https://101noticias.com/wp-content/uploads/2022/05/220428154319-mark-zuckerberg-file-2021-super-tease.jpg');
+    border-radius: 50%;
+    float: left;
+    margin: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.blog__text--inline{
+    display: inline;
+}
+
+.blog__footer{
+    display: flex;
+    justify-content: space-between;
+}
