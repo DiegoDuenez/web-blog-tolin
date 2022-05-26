@@ -36,7 +36,7 @@
 }
 
 .navbar__input:focus::-webkit-input-placeholder {
-    color: var(--gris);
+    color: var(--negro);
 }
 
 

@@ -20,7 +20,6 @@ export default function Blog() {
         <div className="blog">
             <Navbar></Navbar>
             <div className="blog__container">
-                <h5>Blog {id}</h5>
                 
                 <div className="blog__main">
                     <div className="blog__header">
@@ -37,7 +36,26 @@ export default function Blog() {
                     </div>
                 </div>  
 
-                <h3>Comentarios (50)</h3>
+                <h3>Comentarios (1)</h3>
+
+                <div className="comentario">
+                    <div className="comentario__user"></div>
+                    <div className="comentario__contenido">
+                        <p className="comentario__username">@markzuckenberg <span className="comentario__text--gray">1 week ago</span></p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus distinctio quod explicabo eveniet beatae, a, nobis enim doloribus hic id, eum quibusdam asperiores accusamus rerum vel suscipit blanditiis? Totam, consectetur?</p>
+                    </div>
+                </div>
+
+                <div className="comentario">
+                    <div className="comentario__user"></div>
+                    <div className="comentario__contenido">
+                        <textarea className="comentario__textarea" placeholder="Agrega un comentario..."></textarea>
+                        <Button  type="submit" classes="button--verde" text="Comentar"/>
+                    </div>
+                </div>
+
+
+
 
             </div>
 
