@@ -12,12 +12,16 @@ import Background from "../Background/background";
 
 import '../../global/global.css';
 import './blog.css';
+import DocTitle from "../DocTitle/doctitle";
 
 
 export default function Blog() {
     let { id } = useParams();
+
+
     return(
         <div className="blog">
+            <DocTitle pageTitle={"Blog " + id }/>
             <Navbar></Navbar>
             <div className="blog__container">
                 
@@ -48,7 +52,7 @@ export default function Blog() {
 
                 <div className="comentario">
                     <div className="comentario__user"></div>
-                    <div className="comentario__contenido">
+                    <div className="comentario__contenido comentario__contenido--end">
                         <textarea className="comentario__textarea" placeholder="Agrega un comentario..."></textarea>
                         <Button  type="submit" classes="button--verde" text="Comentar"/>
                     </div>

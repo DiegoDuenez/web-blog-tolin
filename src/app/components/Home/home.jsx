@@ -6,6 +6,7 @@ import logo from '../../img/logo.png';
 import Navbar from '../Navbar/navbar';
 import TopList from "../TopList/top-list";
 import Card from '../Card/card';
+import DocTitle from "../DocTitle/doctitle";
 
 import '../../global/global.css';
 import './home.css';
@@ -20,6 +21,7 @@ class Home extends Component{
     render(){
         return(
             <div className="home">
+                <DocTitle pageTitle={"Home"}/>
                 <Navbar></Navbar>
                 <div className="home__container home__container--end">
                     

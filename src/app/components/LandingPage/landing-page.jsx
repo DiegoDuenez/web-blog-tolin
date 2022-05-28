@@ -6,7 +6,7 @@ import logo from '../../img/logo.png';
 
 import Input from '../Input/input';
 import Button from '../Button/button';
-
+import DocTitle from "../DocTitle/doctitle";
 import '../../global/global.css';
 import './landing-page.css';
 
@@ -19,6 +19,7 @@ class Landing extends Component{
 
         return ( 
             <div className="landing">
+                <DocTitle pageTitle={"Explora y comparte temas de interes"}/>
 
                 <div className="landing__video">
                     <div className="landing__mask"></div>
