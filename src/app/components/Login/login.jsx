@@ -5,7 +5,7 @@ import logo from '../../img/logo.png';
 
 import Input from '../Input/input';
 import Button from '../Button/button';
-
+import DocTitle from "../DocTitle/doctitle";
 import Background from "../Background/background";
 
 import '../../global/global.css';
@@ -21,6 +21,7 @@ class Login extends Component{
 
         return ( 
             <div className="login__container">
+                <DocTitle pageTitle={"Login"}/>
 
                 <Background/>
 
