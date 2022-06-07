@@ -14,7 +14,7 @@ import NotFoundPage from './app/components/NotFoundPage/not-found-page.jsx';
 import Categories from './app/components/Categories/categories';
 
 import HomeAdministrator from './app/components/Administrator/Home/home';
-
+import Perfil from './app/components/Perfil/perfil';
 
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
@@ -30,8 +30,10 @@ root.render(
         <Route path="/home" element={<Home />} />
         <Route path="/blog/:id" element={<Blog />} />
         <Route path="/categories" element={<Categories/>} />
-        <Route path='*' exact={true} element={<NotFoundPage/> } />
         <Route path='/administrator' element={<HomeAdministrator/>} />
+        <Route path='/perfil' element={<Perfil/>} />
+        <Route path='*' exact={true} element={<NotFoundPage/> } />
+
       </Routes>
     </BrowserRouter>
 
