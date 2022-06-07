@@ -9,14 +9,8 @@ import Login from './app/components/Login/login';
 import Landing from './app/components/LandingPage/landing-page';
 import Home from './app/components/Home/home';
 import Register from './app/components/Register/register';
-import Blog from './app/components/Blog/blog';
-import NotFoundPage from './app/components/NotFoundPage/not-found-page.jsx';
-import Categories from './app/components/Categories/categories';
 
-import HomeAdministrator from './app/components/Administrator/Home/home';
-
-
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter,Routes,Route } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -28,10 +22,7 @@ root.render(
         <Route path='/login' element={<Login />}/>
         <Route path="/registro" element={<Register />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/blog/:id" element={<Blog />} />
-        <Route path="/categories" element={<Categories/>} />
-        <Route path='*' exact={true} element={<NotFoundPage/> } />
-        <Route path='/administrator' element={<HomeAdministrator/>} />
+
       </Routes>
     </BrowserRouter>
 

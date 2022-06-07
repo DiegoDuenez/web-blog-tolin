@@ -1,0 +1,30 @@
+.card_categories_a{
+  width: 14rem;
+  border: solid 1px #8CA1A5;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+.card_categories_img{
+  height: 2rem;
+  margin: 1rem;
+  width: 2rem;
+}
+.card_list_li{
+  float: left;
+  margin: 1rem;
+}
+.card_list_ul{
+  list-style-type: none;
+}
+.card_list_div{
+  justify-content: center;
+  display: flex;
+  margin: 2rem;
+}
+.card_categories_a:hover{
+  color: white;
+  background: #9D9D9D;
+}
