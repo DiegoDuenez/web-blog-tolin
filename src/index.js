@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom/client';
 
 import './index.css';
 
-import App from './App';
-import Navbar from './app/components/Navbar/navbar';
 import Login from './app/components/Login/login';
 import Landing from './app/components/LandingPage/landing-page';
 import Home from './app/components/Home/home';
@@ -12,11 +10,12 @@ import Register from './app/components/Register/register';
 import Blog from './app/components/Blog/blog';
 import NotFoundPage from './app/components/NotFoundPage/not-found-page.jsx';
 import Categories from './app/components/Categories/categories';
-
+import UsersAdministrator from './app/components/Administrator/Users/users';
+import BlogsAdministrator from './app/components/Administrator/Blogs/blogs';
 import HomeAdministrator from './app/components/Administrator/Home/home';
 
 
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -32,9 +31,10 @@ root.render(
         <Route path="/categories" element={<Categories/>} />
         <Route path='*' exact={true} element={<NotFoundPage/> } />
         <Route path='/administrator' element={<HomeAdministrator/>} />
+        <Route path='/administrator/blogs' element={<BlogsAdministrator/>} />
+        <Route path='/administrator/users' element={<UsersAdministrator/>} />
       </Routes>
     </BrowserRouter>
-
   </React.StrictMode>
 );
 
