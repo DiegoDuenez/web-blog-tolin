@@ -15,7 +15,7 @@ import Categories from './app/components/Categories/categories';
 
 import HomeAdministrator from './app/components/Administrator/Home/home';
 import Perfil from './app/components/Perfil/perfil';
-
+import Mysblogs from './app/components/mysblogs/mysblogs'
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 
@@ -31,6 +31,8 @@ root.render(
         <Route path="/blog/:id" element={<Blog />} />
         <Route path="/categories" element={<Categories/>} />
         <Route path='/administrator' element={<HomeAdministrator/>} />
+        <Route path='/mysblogs' element={<Mysblogs/>} />
+
         <Route path='/perfil' element={<Perfil/>} />
         <Route path='*' exact={true} element={<NotFoundPage/> } />
 

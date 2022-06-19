@@ -32,9 +32,20 @@
 
 .button--white{
     background-color: white;
-    color: var(--verde);
+    color: #26ADD3;
+    border: 1px solid #26ADD3;
 }
-/*
+
 .button--white:hover{
-    background-color: var(--gris);
-}*/
+    background-color: var(--blue);
+}
+.button--blue{
+    background-color: #26ADD3;
+    color: var(--black);
+    border: 1px solid white;
+    
+}
+
+.button--blue:hover{
+    background-color: var(--green);
+}
