@@ -1,4 +1,4 @@
-import {React, Component } from "react";
+import { React, Component } from "react";
 import './navbar.css';
 import { Link } from "react-router-dom"; 
 
@@ -8,10 +8,10 @@ class NavbarAdministrator extends Component{
         return (
         <nav className="navbar">
             <a>
-                <Link className="navbar__link" to="/categories">Control de usuarios</Link>
+                <Link className="navbar__link" to="/administrator/users">Control de usuarios</Link>
             </a>
             <a>
-                <Link className="navbar__link" to="/administrator">Control de blogs</Link>
+                <Link className="navbar__link" to="/administrator/blogs">Control de blogs</Link>
             </a>
 
             <div className="navbar__image">
