@@ -8,22 +8,25 @@ class UsersAdministrator extends Component{
         return (
             <div>
                 <NavbarAdministrator></NavbarAdministrator>
-                <div className="table-center">
-                    <table className="table-border">
-                        <tr>
-                            <th className="table-head">Nombre usuario</th>
-                            <th className="table-head">Correo electronico</th>
-                            <th className="table-head">Estatus</th>
+                <div className="center-table">
+                    <table className="table">
+                        <tr className="table-header">
+                            <th>Nombre usuario</th>
+                            <th>Correo electronico</th>
+                            <th>Estatus</th>
+                            <th></th>
                         </tr>
                         <tr>
-                            <td className="table-border">Mr.Bean</td>
-                            <td className="table-border">mr.bean@email.com</td>
-                            <td className="table-border"><input type="checkbox" name="usu_estatus"></input><label className="label-checkbox" for="usu_estatus">Activo</label></td>
+                            <td>Mr.Bean</td>
+                            <td>mr.bean@email.com</td>
+                            <td><input type="checkbox" name="usu_estatus"></input><label className="label-checkbox" for="usu_estatus">Activo</label></td>
+                            <td><button className="btn-save" type="button">Guardar</button></td>
                         </tr>
                         <tr>
-                            <td className="table-border">PeterParker</td>
-                            <td className="table-border">parker@email.com</td>
-                            <td className="table-border"><input type="checkbox" name="usu_estatus"></input><label className="label-checkbox" for="usu_estatus">Activo</label></td>
+                            <td>PeterParker</td>
+                            <td>parker@email.com</td>
+                            <td><input type="checkbox" name="usu_estatus"></input><label className="label-checkbox" for="usu_estatus">Activo</label></td>
+                            <td><button className="btn-save" type="button">Guardar</button></td>
                         </tr>
                     </table>
                 </div>

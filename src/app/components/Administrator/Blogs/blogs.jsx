@@ -9,22 +9,31 @@ class BlogsAdministrator extends Component{
         return (
             <div>
                 <NavbarAdministrator></NavbarAdministrator>
-                <div className="table-center">
-                    <table className="table-border">
-                        <tr>
-                            <th className="table-head">Nombre usuario</th>
-                            <th className="table-head">Correo electronico</th>
-                            <th className="table-head">Estatus</th>
+                <div className="center-table">
+                    <table className="table">
+                        <tr className="table-header">
+                            <th>Titulo</th>
+                            <th>Usuario</th>
+                            <th>Comentarios</th>
+                            <th>Fecha de publicacion</th>
+                            <th>Estatus</th>
+                            <th></th>
                         </tr>
                         <tr>
-                            <td className="table-border">Mr.Bean</td>
-                            <td className="table-border">mr.bean@email.com</td>
-                            <td className="table-border"><input type="checkbox" name="usu_estatus"></input><label className="label-checkbox" for="usu_estatus">Activo</label></td>
+                            <td>Nuevo sistema operativo</td>
+                            <td>mr.bean@email.com</td>
+                            <td>10</td>
+                            <td>02/08/2022</td>
+                            <td><input type="checkbox" name="usu_estatus"></input><label className="label-checkbox" for="usu_estatus">Activo</label></td>
+                            <td><button className="btn-deactivate" type="button">Desactivar</button></td>
                         </tr>
                         <tr>
-                            <td className="table-border">PeterParker</td>
-                            <td className="table-border">parker@email.com</td>
-                            <td className="table-border"><input type="checkbox" name="usu_estatus"></input><label className="label-checkbox" for="usu_estatus">Activo</label></td>
+                            <td>Windows</td>
+                            <td>parker@email.com</td>
+                            <td>2</td>
+                            <td>08/08/2022</td>
+                            <td><input type="checkbox" name="usu_estatus"></input><label className="label-checkbox" for="usu_estatus">Activo</label></td>
+                            <td><button className="btn-deactivate" type="button">Desactivar</button></td>
                         </tr>
                     </table>
                 </div>

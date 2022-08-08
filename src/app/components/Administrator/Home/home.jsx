@@ -1,5 +1,6 @@
 import {React, Component } from "react";
 import NavbarAdministrator from "../Navbar/navbar";
+import './home.css';
 
 class HomeAdministrator extends Component{
     render() {
