@@ -3,7 +3,7 @@ import './navbar.css';
 import { Link } from "react-router-dom"; 
 
 class NavbarAdministrator extends Component{
-
+    
     render(){
         return (
         <nav className="navbar-administrator">
@@ -17,11 +17,12 @@ class NavbarAdministrator extends Component{
                 <li>
                     <div className="navbar-image">
                         <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" alt="" />
-                        <a className="navbar-user-link" href="#">Diego</a>
+                        <a className="navbar-user-link" id="touch" href="#">Diego</a>
                     </div>
                 </li>
             </ul>
-        </nav>)
+        </nav>
+        )
     }
 
 }
