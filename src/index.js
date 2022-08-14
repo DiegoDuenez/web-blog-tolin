@@ -14,6 +14,8 @@ import UsersAdministrator from './app/components/Administrator/Users/users';
 import BlogsAdministrator from './app/components/Administrator/Blogs/blogs';
 import HomeAdministrator from './app/components/Administrator/Home/home';
 
+import NewCategory from './app/components/Categories/new-category/new-category';
+
 
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
@@ -33,6 +35,8 @@ root.render(
         <Route path='/administrator' element={<HomeAdministrator/>} />
         <Route path='/administrator/blogs' element={<BlogsAdministrator/>} />
         <Route path='/administrator/users' element={<UsersAdministrator/>} />
+
+        <Route path="/categories/new-category" element={<NewCategory/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

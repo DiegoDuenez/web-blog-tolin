@@ -1,0 +1,39 @@
+.btn-guardar{
+    color: white;
+    height: 2rem;
+    width: 10rem;
+    align-items: center;
+    background: var(--azul-100);
+    justify-content: center;
+    display: flex;
+}
+.div-form-new-category{
+    transform: translate(95%, 50%);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background: white;
+    height: 15rem;
+    width: 35%;
+}
+form{
+    align-self: center;
+}
+input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    color: gray;
+    width: 20rem;
+    height: 2rem;
+}
+.div-btn-guardar{
+    justify-content: end;
+    display: flex;
+    margin-top: 1rem;
+}
+.div-btn-guardar :hover{
+    background-color: #0078AA;
+    transition: 400ms;
+}

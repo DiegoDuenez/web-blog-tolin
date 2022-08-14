@@ -5,7 +5,8 @@
     display: flex;
 }
 .navbar-link:hover{
-    background: rgba(150, 150, 150, 0.3)
+    background: rgba(150, 150, 150, 0.3);
+    transition: 400ms;
 }
 .navbar-administrator li{
     display: inline;
@@ -22,12 +23,13 @@
     margin: 0;
     padding: 0;
 }
-.navbar-image{
+.div-navbar-image{
     display: flex;
+    width: 55%;
+    justify-content: end;
     align-items: center;
-    transform: translateX(50rem);
 }
-.navbar-image img{
+.div-navbar-image img{
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
@@ -39,8 +41,12 @@
     display: flex;
     border-right: 1px solid white;
 }
-.navbar-user-link{
+.a-navbar-user-link{
     color: white;
     text-decoration: none;
+    margin-left: 1rem;
+}
+.ul-navbar-link{
+    margin-left: 1rem;
 }
 
