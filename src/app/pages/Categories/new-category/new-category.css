@@ -1,4 +1,4 @@
-.btn-guardar{
+.btn-categoria{
     color: white;
     height: 2rem;
     width: 10rem;
@@ -28,12 +28,12 @@ input{
     width: 20rem;
     height: 2rem;
 }
-.div-btn-guardar{
+.div-btn-categoria{
     justify-content: end;
     display: flex;
     margin-top: 1rem;
 }
-.div-btn-guardar :hover{
+.div-btn-categoria :hover{
     background-color: #0078AA;
     transition: 400ms;
 }

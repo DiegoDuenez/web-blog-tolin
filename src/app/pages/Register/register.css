@@ -1,5 +1,3 @@
-
-
 .register__container{
     display: flex;
     background-color: white;
@@ -13,7 +11,7 @@
     width:30rem;
     border: 1px solid var(--gris);
     box-shadow: 0 15px 70px -10px rgb(0, 0, 0);
-    margin: 8rem auto;
+    transform: translate(90%, 20%);
 }
 
 .register__form{
@@ -45,6 +43,7 @@
 }
 
 .logo{
+    text-align: center;
     position: absolute;
     top: 2rem;
     left: 0;
@@ -52,4 +51,35 @@
 
 .logo img{
     width: 50%;
+}
+
+.btn-registro{
+    background-color: var(--verde);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    font-weight: bold;
+    color:white;
+    transition: 400ms;
+    width: 100%;
+}
+
+.btn-registro:hover{
+    background-color: var(--verde-200);
+    transition: 400ms;
+    color: white;
+}
+
+.register__container input{
+    outline: none;
+    border: 1px solid var(--gris-100);
+    padding: 1rem;
+    border-radius: 5px;
+    width: 100%;
+    transition: 400ms;
+}
+.register__container input:focus{
+    border: 1px solid var(--verde);
 }

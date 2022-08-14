@@ -17,7 +17,7 @@
     padding: 2rem;
     gap: 2rem;
     width:30rem;
-    margin: 8rem auto;
+    transform: translate(90%, 20%);
     /*position: absolute;
     right: 5rem;
     top: 30%;*/
@@ -61,4 +61,35 @@
 
 .logo img{
     width: 50%;
+}
+
+.login__container button{
+    background-color: var(--verde);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    font-weight: bold;
+    color:white;
+    transition: 400ms;
+    width: 100%;
+}
+
+.login__container button:hover{
+    background-color: var(--verde-200);
+    transition: 400ms;
+    color: white;
+}
+
+.login__container input{
+    outline: none;
+    border: 1px solid var(--gris-100);
+    padding: 1rem;
+    border-radius: 5px;
+    width: 100%;
+    transition: 400ms;
+}
+.login__container input:focus{
+    border: 1px solid var(--verde);
 }

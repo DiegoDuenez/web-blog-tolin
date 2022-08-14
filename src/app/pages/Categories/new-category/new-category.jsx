@@ -14,18 +14,14 @@ export default function CreateCategory() {
         })
     }
 
-    /*const postData = () =>{
-        console.log(categoryName);
-    }*/
-
     return(
         <div className="div-form-new-category">
             <Form>
                 <Form.Field>
-                    <input placeholder='Categoría' onChange={(e) => setCategoryName(e.target.value)}/>
+                    <input onChange={(e) => setCategoryName(e.target.value)} placeholder='Categoría'/>
                 </Form.Field>
-                <div className="div-btn-guardar">
-                    <Button onClick={postData} className="btn-guardar" type="submit">Añadir</Button>
+                <div className="div-btn-categoria">
+                    <Button onClick={postData} className="btn-categoria" type="submit">Añadir</Button>
                 </div>
             </Form>
         </div>

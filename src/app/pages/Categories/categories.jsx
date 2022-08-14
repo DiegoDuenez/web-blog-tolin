@@ -8,7 +8,7 @@ import art from '../../img/art.png';
 import car from '../../img/car.png';
 import tecnology from '../../img/tecnology.png';
 
-import Navbar from '../Navbar/navbar';
+import Navbar from '../../components/Navbar/navbar';
 
 
 class Categories extends Component{

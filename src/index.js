@@ -3,27 +3,24 @@ import ReactDOM from 'react-dom/client';
 
 import './index.css';
 
-import Login from './app/components/Login/login';
+import Login from './app/pages/Login/login';
 import Landing from './app/components/LandingPage/landing-page';
 import Home from './app/components/Home/home';
-import Register from './app/components/Register/register';
+import Register from './app/pages/Register/register';
 import Blog from './app/components/Blog/blog';
 import NotFoundPage from './app/components/NotFoundPage/not-found-page.jsx';
-import Categories from './app/components/Categories/categories';
+import Categories from './app/pages/Categories/categories';
 import UsersAdministrator from './app/components/Administrator/Users/users';
 import BlogsAdministrator from './app/components/Administrator/Blogs/blogs';
 import HomeAdministrator from './app/components/Administrator/Home/home';
-<<<<<<< HEAD
 
 import NewCategory from './app/components/Categories/new-category/new-category';
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { BrowserRouter, Routes, Route} from "react-router-dom";
-=======
 import Perfil from './app/components/Perfil/perfil';
 import Mysblogs from './app/components/mysblogs/mysblogs'
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
->>>>>>> master
+
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
