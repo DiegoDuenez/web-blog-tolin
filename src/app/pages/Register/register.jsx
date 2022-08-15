@@ -1,4 +1,4 @@
-import {React, useState } from "react";
+import {React, useState, useRef,useEffect } from "react";
 import { Link,useNavigate } from "react-router-dom";
 
 import Swal from 'sweetalert2'
@@ -14,16 +14,59 @@ import './register.css';
 import axios from 'axios';
 import { Button, Form } from 'semantic-ui-react'
 
-export default function Register(){ 
+const USER_REGEX = /^[a-zA-Z0-9][a-zA-Z0-9]{3,23}$/;
+const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%&]).{8,24}$/;
 
+export default function Register(){
+    
+    const userRef = useRef();
+    const errRef = useRef();
+    
     const [userName, setUserName] = useState('');
+    const [validName, setValidName] = useState(false);
+    const [userFocus, setUserFocus] = useState(false);
+    
+
     const [email, setEmail] = useState('');
+    const [validEmail, setValidEmail] = useState(false);
+    const [emailFocus, setEmailFocus] = useState(false);
+
+
     const [password, setPassword] = useState('');
+    const [validPwd, setValidPwd] = useState(false);
+    const [pwdFocus, setPwdFocus] = useState(false);
 
-    const USER_REGEX = /^[a-zA-Z0-9][a-zA-Z0-9]{3,23}$/;
-    const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%&]).{8,24}$/;
+    const [matchPwd, setMatchPwd] = useState('');
+    const [validMatch, setValidMatch] = useState(false);
+    const [matchFocus, setMatchFocus] = useState(false);
 
-    const [error,setError]=useState(false);
+
+    const [errMsg, setErrMsg]=useState('');
+    const [success, setSuccess] = useState(false);
+
+    useEffect(()=>{
+        userRef.current.focus();
+    }, [])
+
+    useEffect(()=>{
+        const result = USER_REGEX.test(userName);
+        console.log(result);
+        console.log(userName);
+        setValidName(result);
+    }, [userName])
+
+    useEffect(()=>{
+        const result = PWD_REGEX.test(password);
+        console.log(result);
+        console.log(password);
+        setValidName(result);
+        const match = password === matchPwd;
+        setValidMatch(match);
+    }, [password,matchPwd])
+
+    useEffect(()=>{
+        setErrMsg('');
+    }, [userName, password,matchPwd])
 
     const MySwal = withReactContent(Swal);
 
@@ -51,9 +94,7 @@ export default function Register(){
                         login()
                       })
                     
-                  }
-            
-            
+                  }            
         }).catch( (error) => {
             MySwal.fire({
                 icon: 'error',
@@ -74,6 +115,8 @@ export default function Register(){
                 <div className="register__container">
                     <DocTitle pageTitle={"Registro"}/>
                     <h2 className="register__title">Crear cuenta nueva</h2>
+                    
+                    <p ref={errRef} className={errMsg ? "errmsg": "offscreen"}>{errMsg}</p>
 
                     <Form className="register__form">
                         <Form.Field>
@@ -90,7 +133,7 @@ export default function Register(){
                         <label></label>
                             <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Ingresa tu contraseña"/>
                         </Form.Field>
-                        <input type="password" placeholder="Repite tu contraseña"/>
+                        <input onChange={(e) => setMatchPwd(e.target.value)} type="password" placeholder="Repite tu contraseña"/>
                     </Form>
 
                     <div className="register__footer">
