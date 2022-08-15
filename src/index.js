@@ -23,7 +23,15 @@ import Mysblogs from './app/components/mysblogs/mysblogs'
 
 import reportWebVitals from './reportWebVitals';
 
-import Createpost from  './app/pages/Post/new-post/new-post'
+import CreatePost from  './app/pages/Post/new-post'
+import DeletePost from  './app/pages/Post/delete-post'
+import UpdatePost from  './app/pages/Post/update-post'
+
+import CreateComent from  './app/pages/Coments/new-coment'
+import UpdateComent from  './app/pages/Coments/update-coment'
+import DeleteComent from  './app/pages/Coments/delete-coment'
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -38,7 +46,15 @@ root.render(
         <Route path="/categories" element={<Categories/>} />
         <Route path='/administrator' element={<HomeAdministrator/>} />
         <Route path='/mysblogs' element={<Mysblogs/>} />
-        <Route path="/create-post" element={<Createpost/>}/>
+
+        <Route path="/create-post" element={<CreatePost/>}/>
+        <Route path="/update-post/:id" element={<UpdatePost/>}/>
+        <Route path="/delete-post/:id" element={<DeletePost/>}/>
+
+        <Route path="/create-coment" element={<CreateComent/>}/>
+        <Route path="/update-coment/:id" element={<UpdateComent/>}/>
+        <Route path="/delete-coment/:id" element={<DeleteComent/>}/>
+
 
         <Route path='/perfil' element={<Perfil/>} />
         <Route path='*' exact={true} element={<NotFoundPage/> } />
