@@ -14,33 +14,33 @@ import './register.css';
 import axios from 'axios';
 import { Button, Form } from 'semantic-ui-react'
 
-const USER_REGEX = /^[a-zA-Z0-9][a-zA-Z0-9]{3,23}$/;
-const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%&]).{8,24}$/;
+//const USER_REGEX = /^[a-zA-Z0-9][a-zA-Z0-9]{3,23}$/;
+//const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%&]).{8,24}$/;
 
 export default function Register(){
     
-    const userRef = useRef();
-    const errRef = useRef();
+   // const userRef = useRef();
+   // const errRef = useRef();
     
     const [userName, setUserName] = useState('');
-    const [validName, setValidName] = useState(false);
-    const [userFocus, setUserFocus] = useState(false);
+   // const [validName, setValidName] = useState(false);
+  //  const [userFocus, setUserFocus] = useState(false);
     
 
     const [email, setEmail] = useState('');
-    const [validEmail, setValidEmail] = useState(false);
-    const [emailFocus, setEmailFocus] = useState(false);
+  //  const [validEmail, setValidEmail] = useState(false);
+   // const [emailFocus, setEmailFocus] = useState(false);
 
 
     const [password, setPassword] = useState('');
-    const [validPwd, setValidPwd] = useState(false);
-    const [pwdFocus, setPwdFocus] = useState(false);
+   // const [validPwd, setValidPwd] = useState(false);
+  //  const [pwdFocus, setPwdFocus] = useState(false);
 
     const [matchPwd, setMatchPwd] = useState('');
-    const [validMatch, setValidMatch] = useState(false);
-    const [matchFocus, setMatchFocus] = useState(false);
+   // const [validMatch, setValidMatch] = useState(false);
+  //  const [matchFocus, setMatchFocus] = useState(false);
 
-
+/*
     const [errMsg, setErrMsg]=useState('');
     const [success, setSuccess] = useState(false);
 
@@ -67,7 +67,7 @@ export default function Register(){
     useEffect(()=>{
         setErrMsg('');
     }, [userName, password,matchPwd])
-
+*/
     const MySwal = withReactContent(Swal);
 
     const navigate = useNavigate()
@@ -116,8 +116,6 @@ export default function Register(){
                     <DocTitle pageTitle={"Registro"}/>
                     <h2 className="register__title">Crear cuenta nueva</h2>
                     
-                    <p ref={errRef} className={errMsg ? "errmsg": "offscreen"}>{errMsg}</p>
-
                     <Form className="register__form">
                         <Form.Field>
                             <label></label>
