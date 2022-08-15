@@ -54,7 +54,6 @@ class Perfil extends Component{
                             <Input type="number" placeholder="Edad"/>
                             <Input type="email" placeholder="Correo electronico"/>
                             <Button type="submit" classes={buttonClasses} text="Guardar"/>
-                       
              
                        </form>
             
@@ -62,7 +61,7 @@ class Perfil extends Component{
               </div>
               
              <div id="portal" className="add">
-             <button onclick={toggle} className="button_add">
+             <button onClick={toggle} className="button_add">
               <img src={ add } alt="BlogHub" width="60px" height="60px"title="😎🎸" />
                 </button>  
              </div>

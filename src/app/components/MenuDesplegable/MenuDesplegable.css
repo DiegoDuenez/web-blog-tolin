@@ -1,0 +1,38 @@
+.menu-desplegable{
+    position: absolute;
+    display: flex;
+    width: 10rem;
+    height: max-content;
+    top: 4rem;
+    right: 3rem;
+    background-color: rgb(215, 215, 215);
+    border-radius: 1rem;
+    flex-direction: column;
+
+}
+
+.menu-desplegable__option{
+    display: flex;
+    padding: 1rem;
+
+}
+
+.menu-desplegable__link{
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.menu-desplegable__link--red{
+    color: red;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.menu-desplegable__open{
+    display: flex;
+}
+
+.menu-desplegable__close{
+    display: none;
+}

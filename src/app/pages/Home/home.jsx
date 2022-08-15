@@ -26,6 +26,7 @@ class Home extends Component{
                             desc="Hola soy una descripcion"
                             date="21 - Mayo - 2022"
                             user="@diegoduenez"
+                            id="1"
                         />
                         <Card 
                             imgUser="https://101noticias.com/wp-content/uploads/2022/05/220428154319-mark-zuckerberg-file-2021-super-tease.jpg"
@@ -33,6 +34,8 @@ class Home extends Component{
                             desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolores quas, ullam doloribus vel illum ex quasi animi odit! Blanditiis ipsa provident, inventore accusantium sapiente natus quibusdam facere reiciendis dolore!                            "
                             date="21 - Mayo - 2022"
                             user="@markZuckenberg"
+                            id="2"
+
                         />
                         <Card 
                             imgUser="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
@@ -40,6 +43,8 @@ class Home extends Component{
                             desc="Hola soy una descripcion"
                             date="21 - Mayo - 2022"
                             user="@diegoduenez"
+                            id="3"
+
                         />
                         <Card 
                             imgUser="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
@@ -47,6 +52,8 @@ class Home extends Component{
                             desc="Hola soy una descripcion"
                             date="21 - Mayo - 2022"
                             user="@diegoduenez"
+                            id="4"
+
                         />
                         <Card 
                             imgUser="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
@@ -54,6 +61,8 @@ class Home extends Component{
                             desc="Hola soy una descripcion"
                             date="21 - Mayo - 2022"
                             user="@diegoduenez"
+                            id="5"
+
                         />
                     </div>
                     <div className="home__container home__container--column">

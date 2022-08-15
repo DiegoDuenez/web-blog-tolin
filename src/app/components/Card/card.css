@@ -1,4 +1,10 @@
 
+
+.card__link{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
 .card{
     display: flex;
     height: fit-content;
