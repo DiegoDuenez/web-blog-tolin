@@ -5,7 +5,7 @@ import './index.css';
 
 import Login from './app/pages/Login/login';
 import Landing from './app/components/LandingPage/landing-page';
-import Home from './app/components/Home/home';
+import Home from './app/pages/Home/home';
 import Register from './app/pages/Register/register';
 import Blog from './app/components/Blog/blog';
 import NotFoundPage from './app/components/NotFoundPage/not-found-page.jsx';

@@ -3,28 +3,21 @@ import { Link } from "react-router-dom";
 
 import logo from '../../img/logo.png';
 
-import Navbar from '../Navbar/navbar';
-import TopList from "../TopList/top-list";
-import Card from '../Card/card';
-import DocTitle from "../DocTitle/doctitle";
+import Navbar from '../../components/Navbar/navbar';
+import TopList from "../../components/TopList/top-list";
+import Card from '../../components/Card/card';
+import DocTitle from "../../components/DocTitle/doctitle";
 
 import '../../global/global.css';
 import './home.css';
-import Background from "../Background/background";
-
-
 
 class Home extends Component{
-
-    
-
     render(){
         return(
             <div className="home">
                 <DocTitle pageTitle={"Home"}/>
                 <Navbar></Navbar>
                 <div className="home__container home__container--end">
-                    
                     <div className="home__scroll">
                         <h2 className="home__title" >Blogs más recientes <i class="fa-solid fa-sparkles"></i> </h2>
                         <Card 

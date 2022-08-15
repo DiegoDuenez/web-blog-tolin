@@ -1,5 +1,5 @@
 import {React, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 
 import logo from '../../img/logo.png';
@@ -18,6 +18,13 @@ export default function Login(){
 
     var token = null
 
+    const navigate = useNavigate()
+
+
+    const homePage = () => {
+        navigate('/home')
+    }
+
     const postData = () =>{
         var request = {
             "email": email,
@@ -35,10 +42,14 @@ export default function Login(){
         axios.post('http://127.0.0.1:8000/api/auth/login', request, axiosConfig)
         .then((res) => {
             token = res["data"]["access_token"]
-        })
-        console.log(token)
-    }
 
+            if (token !== null || token !== ""){
+                homePage()
+                localStorage.setItem('token', token)
+                //console.log(token)
+            }
+        })
+    }
     
 
     return (
