@@ -2,6 +2,10 @@ import {React, useState } from "react";
 import { Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+
 import logo from '../../img/logo.png';
 import DocTitle from "../../components/DocTitle/doctitle";
 import Background from "../../components/Background/background";
@@ -21,7 +25,7 @@ export default function Login(){
     var username = null
 
     const navigate = useNavigate()
-
+    const MySwal = withReactContent(Swal);
 
     const homePage = () => {
         navigate('/home')
@@ -48,10 +52,26 @@ export default function Login(){
             username = res["data"]["username"]
 
             if (token !== null || token !== ""){
-                homePage()
+                
                 localStorage.setItem('token', token)
                 localStorage.setItem('idUsername', id)
                 localStorage.setItem('username', username)
+
+                MySwal.fire({
+                    icon: 'success',
+                    title: 'Se logueo correctamente',
+                    showConfirmButton: false,
+                    timer: 1500
+                  }).then(() => {
+                    homePage()
+                  })
+                  .catch( (error) => {
+            MySwal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'No se pudo logear correctamente!',
+              })
+        })
                 //console.log(token)
             }
         })

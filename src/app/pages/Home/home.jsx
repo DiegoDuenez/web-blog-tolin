@@ -24,7 +24,8 @@ class Home extends Component{
             this.setState({
             blogs: array_response[0],
             });
-            console.log(this.state.blogs);
+            
+           
           });
         
         
@@ -45,7 +46,6 @@ class Home extends Component{
                             (
                             <Card 
                             key={data.id}
-                            imgUser="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
                             title={data.title}
                             desc={data.description}
                             date={data.created_at}

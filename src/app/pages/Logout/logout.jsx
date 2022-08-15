@@ -1,5 +1,5 @@
-import {React, useState} from "react";
-import { Link, useNavigate} from "react-router-dom";
+import {React} from "react";
+import { useNavigate} from "react-router-dom";
 
 
 export default function Login(){
@@ -13,7 +13,12 @@ export default function Login(){
   }
 
   return (
-    <h1></h1>
+    <div>
+      <h1>hola</h1>
+      {cerrarSesion}
+    </div>
+    
+  
   )
 }
 
