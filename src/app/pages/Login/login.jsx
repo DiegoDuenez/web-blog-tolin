@@ -10,7 +10,6 @@ import { Button, Form } from 'semantic-ui-react'
 
 import '../../global/global.css';
 import './login.css';
-import { getTokenSourceMapRange } from "typescript";
 
 export default function Login(){
 

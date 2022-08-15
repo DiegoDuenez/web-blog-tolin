@@ -2,7 +2,7 @@ import {React, useState} from "react";
 import { Button, Form } from 'semantic-ui-react'
 import axios from 'axios';
 
-import './post.css';
+import './new-post.css';
 
 export default function Createpost() {
 
@@ -21,16 +21,13 @@ export default function Createpost() {
 
     return(
         <div className="div-form-new-post">
-            <Form>
+            <Form className="form-new-post">
                 <Form.Field>
                 <input onChange={(e) => setpostName(e.target.value)} placeholder='Nombre del Post'/>
                     <input onChange={(e) => set_description(e.target.value)} placeholder='Descripcion'/>
                     <input onChange={(e) => set_user_id(e.target.value)} placeholder='usuario Id'/>
-
                 </Form.Field>
-
-
-                <div className="div-btn-post">
+                <div className="form-new-post-footer">
                     <Button onClick={postData} className="btn-post" type="submit">Añadir post</Button>
                 </div>
             </Form>

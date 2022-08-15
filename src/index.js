@@ -14,7 +14,7 @@ import UsersAdministrator from './app/components/Administrator/Users/users';
 import BlogsAdministrator from './app/components/Administrator/Blogs/blogs';
 import HomeAdministrator from './app/components/Administrator/Home/home';
 
-import NewCategory from './app/components/Categories/new-category/new-category';
+import NewCategory from './app/pages/Categories/new-category/new-category';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -22,6 +22,8 @@ import Perfil from './app/components/Perfil/perfil';
 import Mysblogs from './app/components/mysblogs/mysblogs'
 
 import reportWebVitals from './reportWebVitals';
+
+import Createpost from  './app/pages/Post/new-post/new-post'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -36,6 +38,7 @@ root.render(
         <Route path="/categories" element={<Categories/>} />
         <Route path='/administrator' element={<HomeAdministrator/>} />
         <Route path='/mysblogs' element={<Mysblogs/>} />
+        <Route path="/create-post" element={<Createpost/>}/>
 
         <Route path='/perfil' element={<Perfil/>} />
         <Route path='*' exact={true} element={<NotFoundPage/> } />
