@@ -1,37 +1,23 @@
 import {React, useState} from "react";
 import { Button, Form } from 'semantic-ui-react'
 import axios from 'axios';
+import { BrowserRouter as useParams } from "react-router-dom";
 
 import './post.css';
 
-export default function Createpost() {
-
-    const [title, setpostName] = useState('');
-    const [description, set_description] = useState('');
-    const [user_id, set_user_id] = useState('');
+export default function DeletePost() {
+//    let { id } = useParams();
 
 
-    const deleteData = () => {
-        axios.delete('http://127.0.0.1:8000/api/Post', {
-            "title":title,
-            "description":description,
-            "user_id":user_id
-        })
+    const postData = () => {
+        axios.put('http://127.0.0.1:8000/api/Post/')
     }
 
     return(
         <div className="div-form-new-post">
-            <Form>
-                <Form.Field>
-                    <input onChange={(e) => setpostName(e.target.value)} placeholder='Nombre del Post'/>
-                    <input onChange={(e) => set_description(e.target.value)} placeholder='Descripcion'/>
-                    <input onChange={(e) => set_user_id(e.target.value)} placeholder='usuario Id'/>
-
-                </Form.Field>
-
-
-                <div className="div-btn-post">
-                    <Button onClick={deleteData} className="btn-post" type="submit">Eliminar post</Button>
+            <Form className="form-new-post">
+                <div className="form-new-post-footer">
+                    <Button onClick={postData} className="btn-post" type="submit">Eliminar post</Button>
                 </div>
             </Form>
         </div>

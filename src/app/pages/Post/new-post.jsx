@@ -2,10 +2,9 @@ import {React, useState} from "react";
 import { Button, Form } from 'semantic-ui-react'
 import axios from 'axios';
 
-import './new-post.css';
+import './post.css';
 
 export default function Createpost() {
-
     const [title, setpostName] = useState('');
     const [description, set_description] = useState('');
     const [user_id, set_user_id] = useState('');

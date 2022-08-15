@@ -20,15 +20,18 @@ export default function CreateComent() {
     }
 
     return(
-        <div className="div-form-coment">
-            <Form className="form-coment">
+        <div className="div-form-new-coment">
+            <Form>
                 <Form.Field>
                     <input onChange={(e) => setComentName(e.target.value)} placeholder='Comentario'/>
                     <input onChange={(e) => set_id_post(e.target.value)} placeholder='Id post'/>
                     <input onChange={(e) => set_id_user(e.target.value)} placeholder='Id user'/>
+
                 </Form.Field>
-                <div className="form-coment-footer">
-                    <Button onClick={postData} className="btn-coment" type="submit">Añadir Comentario</Button>
+
+
+                <div className="div-btn-comentario">
+                    <Button onClick={postData} className="btn-comentario" type="submit">Actualizar Comentario</Button>
                 </div>
             </Form>
         </div>
