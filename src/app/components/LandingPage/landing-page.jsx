@@ -1,5 +1,5 @@
 import {React, Component } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 //import video from '../../img/video.mp4';
 import logo from '../../img/logo.png';
@@ -10,9 +10,15 @@ import DocTitle from "../DocTitle/doctitle";
 import '../../global/global.css';
 import './landing-page.css';
 
-
-
 class Landing extends Component{
+    
+
+    componentDidMount() {
+        if(localStorage.getItem('token'))
+        {
+            console.log("Aqui lo envia a home") 
+        }
+    }
 
     render(){
         var buttonClasses = " button--white"
