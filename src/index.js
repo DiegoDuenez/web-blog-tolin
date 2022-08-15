@@ -31,7 +31,7 @@ import CreateComent from  './app/pages/Coments/new-coment'
 import UpdateComent from  './app/pages/Coments/update-coment'
 import DeleteComent from  './app/pages/Coments/delete-coment'
 
-
+import Logout from  './app/pages/Logout/logout'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -40,6 +40,7 @@ root.render(
       <Routes>
         <Route index  element={<Landing />}/>
         <Route path='/login' element={<Login />}/>
+        <Route path='/logout' element={<Logout />}/>
         <Route path="/registro" element={<Register />} />
         <Route path="/home" element={<Home />} />
         <Route path="/blog/:id" element={<Blog />} />
@@ -63,6 +64,7 @@ root.render(
         <Route path='/administrator/users' element={<UsersAdministrator/>} />
 
         <Route path="/categories/new-category" element={<NewCategory/>}/>
+
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

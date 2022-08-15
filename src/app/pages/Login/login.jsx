@@ -17,6 +17,8 @@ export default function Login(){
     const [password, setPassword] = useState('');
 
     var token = null
+    var id = null
+    var username = null
 
     const navigate = useNavigate()
 
@@ -42,15 +44,19 @@ export default function Login(){
         axios.post('http://127.0.0.1:8000/api/auth/login', request, axiosConfig)
         .then((res) => {
             token = res["data"]["access_token"]
+            id =  res["data"]["id"]
+            username = res["data"]["username"]
 
             if (token !== null || token !== ""){
                 homePage()
                 localStorage.setItem('token', token)
+                localStorage.setItem('idUsername', id)
+                localStorage.setItem('username', username)
                 //console.log(token)
             }
         })
     }
-    
+     
 
     return (
         <div>
