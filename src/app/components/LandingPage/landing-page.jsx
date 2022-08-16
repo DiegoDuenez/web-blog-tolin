@@ -13,11 +13,15 @@ import './landing-page.css';
 class Landing extends Component{
     
 
-    componentDidMount() {
+    componentWillMount() {
         if(localStorage.getItem('token'))
         {
-            console.log("Aqui lo envia a home") 
+            this.redirect()
         }
+    }
+
+    redirect(){
+        window.location.href = '/home'
     }
 
     render(){

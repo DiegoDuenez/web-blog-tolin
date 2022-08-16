@@ -14,6 +14,7 @@ class Home extends Component{
 
     render(){
         return(
+            <Link to={"/blog/" + this.props.id }  className="card__link" >
             <div className="card">
                 <div className="card__header">
                     <div className="card__user">
@@ -29,6 +30,7 @@ class Home extends Component{
                     <p>{ this.props.date }</p>
                 </div>
             </div>
+            </Link>
         )
     }
 

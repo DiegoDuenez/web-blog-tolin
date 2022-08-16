@@ -17,8 +17,8 @@ class Home extends Component{
     state = {
         blogs: [],
     }
-    async componentDidMount() {
-        const res = await axios.get('http://127.0.0.1:8000/api/postGet')
+    async componentWillMount() {
+        const res = await axios.get('http://127.0.0.1:8000/api/Post')
         .then((response) => {
             let array_response = [response.data.postList];
             this.setState({
@@ -45,6 +45,7 @@ class Home extends Component{
                         this.state.blogs.map((data) => 
                             (
                             <Card 
+                            id={data.id}
                             key={data.id}
                             title={data.title}
                             desc={data.description}

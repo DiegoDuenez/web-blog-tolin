@@ -9,16 +9,12 @@ export default function Login(){
   const cerrarSesion = () =>
   {
       localStorage.clear();
-      navigate('/')
+      navigate('/home')
   }
 
+
   return (
-    <div>
-      <h1>hola</h1>
-      {cerrarSesion}
-    </div>
-    
-  
+      cerrarSesion
   )
 }
 

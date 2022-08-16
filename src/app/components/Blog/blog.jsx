@@ -8,6 +8,8 @@ import Button from '../Button/button';
 import Navbar from '../Navbar/navbar';
 import Card from '../Card/card';
 
+import axios from 'axios';
+
 import Background from "../Background/background";
 
 import '../../global/global.css';
@@ -15,13 +17,33 @@ import './blog.css';
 import DocTitle from "../DocTitle/doctitle";
 
 
-export default function Blog() {
-    let { id } = useParams();
+class Blog extends Component{
 
+    id =2;
+    state = {
+        blog: [],
+    }
 
+    //const [count, setCount] = useState(0);
+
+    async componentWillMount() {
+       
+        const res = await axios.get('http://127.0.0.1:8000/api/Post/1')
+        .then((response) => {
+            console.log(response)
+            let array_response = [response.data.PostList];
+            this.setState({
+                blog: array_response[0],
+            });
+            
+          });
+          //console.log(res);
+    }  
+
+   render(){
     return(
         <div className="blog">
-            <DocTitle pageTitle={"Blog " + id }/>
+            <DocTitle pageTitle={"Blog " + this.id }/>
             <Navbar></Navbar>
             <div className="blog__container">
                 
@@ -32,7 +54,14 @@ export default function Blog() {
                         <h2><span style={{color: 'var(--verde)'}}>#</span> Ejemplo </h2> 
                     </div> 
                     <div className="blog__body">
-                        <p className="blog__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore esse temporibus nesciunt velit dolore optio quo facilis necessitatibus incidunt? Totam velit quod esse aliquam possimus assumenda dolorum sed enim odit.</p>
+                        {
+                              this.state.blog.map((data) => 
+                              (
+                                console.log("Hola")
+                              )
+                          )
+                        
+                       }
                     </div>
                     <div className="blog__footer">
                         <p className="blog__text blog__text--inline">@markzuckenberg</p>
@@ -65,5 +94,8 @@ export default function Blog() {
 
         </div>
     )
+   }
 
 }
+
+export default Blog;
