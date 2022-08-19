@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link, useParams} from "react-router-dom";
 
 import logo from '../../img/logo.png';
+import Swal from 'sweetalert2'
 
 import Input from '../Input/input';
 import Button from '../Button/button';
@@ -15,19 +16,63 @@ import Background from "../Background/background";
 import '../../global/global.css';
 import './blog.css';
 import DocTitle from "../DocTitle/doctitle";
+import { Form } from 'semantic-ui-react'
 
 
 class Blog extends React.Component{
 
-    state = {
-        blog: [],
+    constructor(props) {
+        super(props);
+        
+        this.state = {
+          blog:[],
+          value: 'Escribe algo.',
+          coments:[],
+        };
+    
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+      }
+    
+      handleChange(event) {
+        this.setState({value: event.target.value});
+      }
+    
+      handleSubmit(event) {
+        
+        this.new_comment(this.state.value)
+        event.preventDefault();
+      }
+    
+      async new_comment(description) {
+        const id_user =localStorage.getItem("idUsername")
+        const blog_id = this.props.params.id;
+        axios.post('http://127.0.0.1:8000/api/Comments', {
+            
+            "description":description,
+            'post_id':blog_id,
+            'user_id':id_user
+        }).then((res) => {
+            Swal.fire({
+                    icon: 'success',
+                    title: 'Se Inserto Correctamente',
+                    showConfirmButton: false,
+                    timer: 1500
+                  }).then(() => {
+                    Blog()
+                  })
+                
+        
+                //console.log(token)
+            })
+        console.log("texto"+description);
+        console.log("usuario"+id_user)
+        console.log( "blog"+blog_id)
     }
-
-
     async componentWillMount() {
-        const id = this.props.params.id;
-       
-        const res = await axios.get('http://127.0.0.1:8000/api/Post/'+id)
+
+        const blog_id = this.props.params.id;
+        const res = await axios.get('http://127.0.0.1:8000/api/Post/'+blog_id)
         .then((response) => {
             console.log(response)
             let array_response = [response.data.PostList];
@@ -37,10 +82,17 @@ class Blog extends React.Component{
             
           });
           console.log(this.state.blog)
+           
+         
+          
           //console.log(res);
-    }  
+    }
+   
+   
+    
 
    render(){
+    
     //const {id} = this.props.match.params;
     return(
         <div className="blog">
@@ -74,18 +126,20 @@ class Blog extends React.Component{
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus distinctio quod explicabo eveniet beatae, a, nobis enim doloribus hic id, eum quibusdam asperiores accusamus rerum vel suscipit blanditiis? Totam, consectetur?</p>
                     </div>
                 </div>
-
+                    
                 <div className="comentario">
                     <div className="comentario__user"></div>
                     <div className="comentario__contenido comentario__contenido--end">
-                        <textarea className="comentario__textarea" placeholder="Agrega un comentario..."></textarea>
-                        <Button  type="submit" classes="button--verde" text="Comentar"/>
+                    <form onSubmit={this.handleSubmit}>
+                        <textarea value={this.state.value} onChange={this.handleChange}  className="comentario__textarea" placeholder="Agrega un comentario..." />
+                        <Button  type="submit" value="Submit" classes="button--verde" text="Comentar"/>
+                    </form>
+
                     </div>
                 </div>
 
-
-
-
+              
+              
             </div>
 
         </div>
@@ -95,3 +149,4 @@ class Blog extends React.Component{
 }
 
 export default Blog;
+
