@@ -5,6 +5,7 @@
     margin-bottom: 1rem;
     padding-right: 2rem ;
     padding-left: 2rem;
+    width: 100%;
 }
 
 
@@ -18,7 +19,7 @@
     width: 40rem;
     height: 37rem;
     padding: 1rem;
-    width: 100%;
+    width: 65%;
     background-color: white !important;
     background-repeat: no-repeat;
     background-color: white;
@@ -34,7 +35,7 @@
 
 .home__container--end{
     padding-top: 3rem;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .home__container--column{

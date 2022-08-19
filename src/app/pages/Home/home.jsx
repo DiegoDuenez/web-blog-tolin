@@ -12,6 +12,7 @@ import DocTitle from "../../components/DocTitle/doctitle";
 
 import '../../global/global.css';
 import './home.css';
+import FloatButton from "../../components/float-button/float-button";
 
 class Home extends Component{
     state = {
@@ -56,14 +57,8 @@ class Home extends Component{
                        }
                        
                     </div>
-                    <div className="home__container home__container--column">
-                        <TopList title="Blogs más populares"/>
-                        <TopList title="Categorías más populares"/>
-                    </div>
-
                 </div>
-                
-               
+                <FloatButton></FloatButton>
             </div>
         )
     }

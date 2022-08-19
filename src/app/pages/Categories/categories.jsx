@@ -9,6 +9,7 @@ import car from '../../img/car.png';
 import tecnology from '../../img/tecnology.png';
 
 import Navbar from '../../components/Navbar/navbar';
+import FloatButton from "../../components/float-button/float-button";
 
 
 class Categories extends Component{
@@ -72,6 +73,7 @@ class Categories extends Component{
                 </li>
               </ul>
             </div>
+            <FloatButton></FloatButton>
           </div>
         )
     }

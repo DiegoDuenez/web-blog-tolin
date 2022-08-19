@@ -4,10 +4,18 @@
     background-color: var(--verde);
     width: 100%;
     height: 5rem;
-    justify-content: space-between;
     align-items: center;
     padding:  2% 7%;
     border-bottom: 5px solid var(--verde-200);
+    justify-content: end;
+}
+
+.navbar__logo{
+    transform: translateX(-430%);
+}
+
+.navbar__logo img{
+    height: 4rem;
 }
 
 .navbar__link{
