@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
 import './index.css';
+
+import { Navigate } from 'react-router-dom';
 
 import Login from './app/pages/Login/login';
 import Landing from './app/components/LandingPage/landing-page';
@@ -38,7 +39,7 @@ import { useParams } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const Auxroute = () => <Blog params={useParams()}/>
-
+const user = () =>{}
 root.render(
   <React.StrictMode>
     <BrowserRouter>
