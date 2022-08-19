@@ -59,7 +59,7 @@ class Blog extends React.Component{
                     showConfirmButton: false,
                     timer: 1500
                   }).then(() => {
-                    Blog()
+                    window.location.reload();
                   })
                 
         
