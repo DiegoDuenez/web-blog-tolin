@@ -18,7 +18,7 @@ class Home extends Component{
             <div className="card">
                 <div className="card__header">
                     <div className="card__user">
-                        <img src={ this.props.imgUser } alt="imgUser" />
+                      
                         <p>{ this.props.user }</p>
                     </div>
                     <div className="card__info">

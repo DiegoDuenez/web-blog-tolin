@@ -27,6 +27,19 @@ export default function Login(){
     const navigate = useNavigate()
     const MySwal = withReactContent(Swal);
 
+    function validarFormulario(){
+        let usuario = document.forms['login']['usuario'].value;
+        let contrasenia = document.forms['login']['contrasenia'].value;
+
+        if (usuario == ""){ 
+            Swal.fire({title:"Escrie tu correo electrónico."})
+        }
+    
+        if (contrasenia == ""){
+            Swal.fire({title:"Escribe tu contraseña."})
+        }
+    }
+
     const homePage = () => {
         navigate('/home')
     }
@@ -87,14 +100,14 @@ export default function Login(){
             <div className="login__container">
             <DocTitle pageTitle={"Login"}/>
             <h2 className="login__title">Iniciar Sesión</h2>
-            <Form className="login__form">
-                <input  onChange={(e) => setEmail(e.target.value)} type="text" placeholder="Ingresa tu correo"/>
-                <input  onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Ingresa tu contraseña"/>
+            <Form name="login" className="login__form" onSubmit={e => validarFormulario(e)}>
+                <input name="usuario"  onChange={(e) => setEmail(e.target.value)} type="text" placeholder="Ingresa tu correo"/>
+                <input name="contrasenia"  onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Ingresa tu contraseña"/>
+                <div className="login__footer">
+                    <Button onClick={postData} type="submit">Iniciar Sesión</Button>
+                    <Link to="/registro" className="register__link">Crear cuenta</Link>
+                </div>
             </Form>
-            <div className="login__footer">
-                <Button onClick={postData} type="submit">Iniciar Sesión</Button>
-                <Link to="/registro" className="register__link">Crear cuenta</Link>
-            </div>
         </div>
         </div>
 

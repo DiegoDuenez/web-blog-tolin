@@ -4,6 +4,17 @@ import axios from 'axios';
 
 import './coment.css';
 
+function validateForm(){
+    let comentario = document.forms["myForm"]["comentario"].value;
+
+    if (comentario == ""){
+        alert("El titulo es necesario.");
+        return
+    }
+
+    return true
+}
+
 export default function CreateComent() {
 
     const [comentName, setComentName] = useState('');
@@ -21,9 +32,9 @@ export default function CreateComent() {
 
     return(
         <div className="div-form-coment">
-            <Form className="form-coment">
+            <Form className="form-coment" onSubmit={e => validateForm(e)}>
                 <Form.Field>
-                    <input onChange={(e) => setComentName(e.target.value)} placeholder='Comentario'/>
+                    <input name="comentario" onChange={(e) => setComentName(e.target.value)} placeholder='Comentario'/>
                     <input onChange={(e) => set_id_post(e.target.value)} placeholder='Id post'/>
                     <input onChange={(e) => set_id_user(e.target.value)} placeholder='Id user'/>
                 </Form.Field>

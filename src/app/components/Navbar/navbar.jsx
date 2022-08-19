@@ -17,6 +17,9 @@ export default function Navbar() {
         <nav className="navbar">
             <MenuDesplegable  classes={`${hideMenuDesplegable ? "menu-desplegable__close" : ""}`}/>
             <a>
+                <Link className="navbar__link" to="/home">Pagina principal</Link>
+            </a>
+            <a>
                 <Link className="navbar__link" to="/categories">Categorías</Link>
             </a>
             <a>
