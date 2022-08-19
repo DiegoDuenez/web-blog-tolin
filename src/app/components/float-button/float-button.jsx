@@ -9,7 +9,7 @@ class FloatButton extends Component {
         return(
             <div id="container-floating">                              
                 <div class="nd1 nds">
-                    <Link to="/">
+                    <Link to="/nuevo/blog">
                         <MdForum color="white" class="reminder"/>
                     </Link>
                 </div>

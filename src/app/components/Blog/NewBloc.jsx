@@ -4,7 +4,8 @@ import logo from '../../img/logo.png';
 import Background from "../Background/background";
 import Navbar from '../Navbar/navbar';
 import DocTitle from "../DocTitle/doctitle";
-import '../../global/global.css';
+import FloatButton from "../../components/float-button/float-button";
+
 import './blog.css';
 import './style2.css';
 import Swal from 'sweetalert2';
@@ -64,7 +65,8 @@ export default function NBlog(){
   }
 
   return (
-    <div>
+    <div className="body-form">
+      <Navbar></Navbar>
        <div className="contact_form">
 
 <div className="formulario">      
@@ -88,6 +90,7 @@ export default function NBlog(){
             </Form>
 </div>  
 </div>
+  <FloatButton></FloatButton>
     </div>
   )
 }

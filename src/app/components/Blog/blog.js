@@ -11,6 +11,7 @@ import Card from '../Card/card';
 import axios from 'axios';
 
 import Background from "../Background/background";
+import FloatButton from "../float-button/float-button";
 
 import '../../global/global.css';
 import './blog.css';
@@ -112,7 +113,7 @@ class Blog extends React.Component{
 
 
             </div>
-
+            <FloatButton></FloatButton>
         </div>
     )
    }
