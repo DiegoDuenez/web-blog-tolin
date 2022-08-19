@@ -71,16 +71,16 @@ export default function NBlog(){
           <Form className="login__form">       
             <p>
               <label for="titulo" className="colocar_nombre">Titulo
-                <span className="obligatorio">*</span>
+                <span className="obligatorio span1">*</span>
               </label>
-                <input onChange={(e) => setTitle(e.target.value)} type="text" name="introducir_nombre" id="titulo" required="obligatorio" placeholder="Escribe tu Titulo" />
+                <input onChange={(e) => setTitle(e.target.value)} type="text" name="introducir_nombre" id="titulo" required="obligatorio" placeholder="Escribe tu Titulo" className="input1" />
             </p>
         
             <p>
               <label for="mensaje" className="colocar_mensaje">Mensaje
                 <span className="obligatorio">*</span>
               </label>                     
-                                <textarea name="introducir_mensaje" className="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..." onChange={(e) => setBlog(e.target.value)}></textarea> 
+                                <textarea name="introducir_mensaje" className="texto_mensaje textarea1" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..." onChange={(e) => setBlog(e.target.value)}></textarea> 
                             </p>                    
           
             <button type="submit" name="enviar_formulario" id="enviar" onClick={postData} className="button2"><p>Enviar</p></button>
