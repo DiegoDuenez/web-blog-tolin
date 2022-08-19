@@ -1,5 +1,5 @@
-import {React, Component } from "react";
-import { BrowserRouter as Router, Switch, Route, Link, useParams } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link, useParams} from "react-router-dom";
 
 import logo from '../../img/logo.png';
 
@@ -17,18 +17,17 @@ import './blog.css';
 import DocTitle from "../DocTitle/doctitle";
 
 
-class Blog extends Component{
+class Blog extends React.Component{
 
-    id =2;
     state = {
         blog: [],
     }
 
-    //const [count, setCount] = useState(0);
 
     async componentWillMount() {
+        const id = this.props.params.id;
        
-        const res = await axios.get('http://127.0.0.1:8000/api/Post/1')
+        const res = await axios.get('http://127.0.0.1:8000/api/Post/'+id)
         .then((response) => {
             console.log(response)
             let array_response = [response.data.PostList];
@@ -37,13 +36,15 @@ class Blog extends Component{
             });
             
           });
+          console.log(this.state.blog)
           //console.log(res);
     }  
 
    render(){
+    //const {id} = this.props.match.params;
     return(
         <div className="blog">
-            <DocTitle pageTitle={"Blog " + this.id }/>
+            <DocTitle pageTitle={"Blog "  }/>
             <Navbar></Navbar>
             <div className="blog__container">
                 
@@ -51,21 +52,16 @@ class Blog extends Component{
                     <div className="blog__header">
                         <div className="blog__user">
                         </div>
-                        <h2><span style={{color: 'var(--verde)'}}>#</span> Ejemplo </h2> 
+                        <h2><span style={{color: 'var(--verde)'}}>#</span> {this.state.blog.title} </h2> 
                     </div> 
                     <div className="blog__body">
-                        {
-                              this.state.blog.map((data) => 
-                              (
-                                console.log("Hola")
-                              )
-                          )
-                        
-                       }
-                    </div>
+                        <p>
+                            {this.state.blog.description}
+                         </p>
+                     </div>
                     <div className="blog__footer">
-                        <p className="blog__text blog__text--inline">@markzuckenberg</p>
-                        <p className="blog__fecha blog__text--inline">26-05-2022</p>
+                        <p className="blog__text blog__text--inline">@{this.state.blog.user_id}</p>
+                        <p className="blog__fecha blog__text--inline">{this.state.blog.created_at}</p>
                     </div>
                 </div>  
 

@@ -33,7 +33,11 @@ import DeleteComent from  './app/pages/Coments/delete-coment'
 
 import Logout from  './app/pages/Logout/logout'
 
+import { useParams } from "react-router-dom";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const Auxroute = () => <Blog params={useParams()}/>
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
@@ -43,7 +47,7 @@ root.render(
         <Route path='/logout' element={<Logout />}/>
         <Route path="/registro" element={<Register />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/blog/:id" element={<Blog />} />
+        <Route path="/blog/:id" element={<Auxroute />}/>
         <Route path="/categories" element={<Categories/>} />
         <Route path='/administrator' element={<HomeAdministrator/>} />
         <Route path='/mysblogs' element={<Mysblogs/>} />

@@ -14,7 +14,11 @@ export default function Login(){
 
 
   return (
-      cerrarSesion
+    <div>
+      <h1>hola</h1>
+      {cerrarSesion()}
+    </div>
+  
   )
 }
 

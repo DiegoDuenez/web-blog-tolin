@@ -28,8 +28,6 @@ class Home extends Component{
            
           });
         
-        
-        
         //this.setState({blogs: res.data});
         //console.log(this.state.blogs);
     }
