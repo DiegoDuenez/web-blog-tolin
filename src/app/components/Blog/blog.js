@@ -21,6 +21,8 @@ class Blog extends React.Component{
 
     state = {
         blog: [],
+        coments:[],
+        total:[]
     }
 
 
@@ -36,7 +38,20 @@ class Blog extends React.Component{
             });
             
           });
-          console.log(this.state.blog)
+
+        const res2 = await axios.get('http://127.0.0.1:8000/api/post/'+id+'/Comments')
+        .then((response) => {
+            console.log(response)
+            let array_response = [response.data.CommentsList];
+            let totale = [response.data.total]
+            console.log(totale)
+            this.setState({
+                coments: array_response[0],
+                total: totale[0]
+            });
+            
+          });
+          console.log(this.state.coments)
           //console.log(res);
     }  
 
@@ -65,15 +80,25 @@ class Blog extends React.Component{
                     </div>
                 </div>  
 
-                <h3>Comentarios (1)</h3>
+                <h3>Comentarios ({this.state.total})</h3>
 
-                <div className="comentario">
-                    <div className="comentario__user"></div>
+                
+                {
+			        this.state.coments.map((data) => 
+                            (
+                    <div key={data.id}>
+                        <div className="comentario">
+                    <div className="comentario__user" ></div>
                     <div className="comentario__contenido">
-                        <p className="comentario__username">@markzuckenberg <span className="comentario__text--gray">1 week ago</span></p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus distinctio quod explicabo eveniet beatae, a, nobis enim doloribus hic id, eum quibusdam asperiores accusamus rerum vel suscipit blanditiis? Totam, consectetur?</p>
+                        <p className="comentario__username">@{data.user_id} <span className="comentario__text--gray">{data.created_at}</span></p>
+                        <p>{data.description}</p>
                     </div>
-                </div>
+                    </div>
+                    </div>
+ 			            )
+                        )
+                       }
+                
 
                 <div className="comentario">
                     <div className="comentario__user"></div>

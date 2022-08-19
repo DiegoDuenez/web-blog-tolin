@@ -6,7 +6,7 @@ import Navbar from '../Navbar/navbar';
 import DocTitle from "../DocTitle/doctitle";
 import '../../global/global.css';
 import './blog.css';
-import './style.css';
+import './style2.css';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import axios from "axios";
@@ -20,6 +20,7 @@ export default function NBlog(){
 
   const [title, setTitle] = useState('');
   const [blog, setBlog] = useState('');
+  
 
   const homePage = () => {
     navigate('/home')
@@ -82,7 +83,7 @@ export default function NBlog(){
                                 <textarea name="introducir_mensaje" className="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..." onChange={(e) => setBlog(e.target.value)}></textarea> 
                             </p>                    
           
-            <button type="submit" name="enviar_formulario" id="enviar" onClick={postData} ><p>Enviar</p></button>
+            <button type="submit" name="enviar_formulario" id="enviar" onClick={postData} className="button2"><p>Enviar</p></button>
 
             </Form>
 </div>  

@@ -25,7 +25,7 @@ export default function Navbar() {
             <div className="navbar__image" onClick={() => showMenuDesplegable(false)}>
                 <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" alt="" />
                 <a className="navbar__link" href="#"  >
-                    Diego
+                {localStorage.getItem('username')}
                 </a>
             </div>
         </nav>)

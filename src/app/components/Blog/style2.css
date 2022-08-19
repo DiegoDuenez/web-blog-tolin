@@ -52,7 +52,7 @@ label{
 }
 
 
-button{
+.button2{
   height: 45px; 
   padding-left: 5px;
   padding-right: 5px;   
@@ -68,7 +68,7 @@ button{
 }
 
 
-button p{
+.button2 p{
   color: #fff; 
 }
 
