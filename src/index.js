@@ -7,6 +7,7 @@ import Login from './app/pages/Login/login';
 import Landing from './app/components/LandingPage/landing-page';
 import Home from './app/pages/Home/home';
 import Register from './app/pages/Register/register';
+import NBlog from './app/components/Blog/NewBloc';
 import Blog from './app/components/Blog/blog';
 import NotFoundPage from './app/components/NotFoundPage/not-found-page.jsx';
 import Categories from './app/pages/Categories/categories';
@@ -48,6 +49,7 @@ root.render(
         <Route path="/registro" element={<Register />} />
         <Route path="/home" element={<Home />} />
         <Route path="/blog/:id" element={<Auxroute />}/>
+        <Route path="/nuevo/blog" element={<NBlog/>} />
         <Route path="/categories" element={<Categories/>} />
         <Route path='/administrator' element={<HomeAdministrator/>} />
         <Route path='/mysblogs' element={<Mysblogs/>} />
