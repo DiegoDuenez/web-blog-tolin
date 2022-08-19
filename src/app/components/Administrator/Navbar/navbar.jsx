@@ -20,7 +20,7 @@ class NavbarAdministrator extends Component{
             </ul>
             <div className="div-navbar-image">
                 <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" alt="" />
-                <a className="a-navbar-user-link" id="touch" href="#">Diego</a>
+                <a className="a-navbar-user-link" id="touch" href="#">{localStorage.getItem('username')}</a>
             </div>
         </nav>
         )
