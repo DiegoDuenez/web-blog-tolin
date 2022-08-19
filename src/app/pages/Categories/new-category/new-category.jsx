@@ -1,17 +1,55 @@
 import {React, useState} from "react";
-import { Button, Form } from 'semantic-ui-react'
+import { Button, Form } from 'semantic-ui-react';
+import { Link, useNavigate} from "react-router-dom";
 import axios from 'axios';
 
 import './new-category.css';
 
-export default function CreateCategory() {
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 
+export default function CreateCategory() {
+    const navigate = useNavigate();
+    const MySwal = withReactContent(Swal);
     const [categoryName, setCategoryName] = useState('');
 
+    const homePage = () => {
+        navigate('/home')
+      }
+
     const postData = () => {
-        axios.post('http://127.0.0.1:8000/api/categorias', {
-            "category_name":categoryName
-        })
+        var token = localStorage.getItem('token')
+        var request = {
+        "category_name": categoryName,
+        };
+        let axiosConfig = {
+            headers: {
+                'Content-Type': 'application/json;charset=UTF-8',
+                "Access-Control-Allow-Origin": "*",
+            }
+          };
+
+        axios.post('http://127.0.0.1:8000/api/categorias', request, axiosConfig)
+        .then((res) => {
+            if(res.status==201)
+            {
+              MySwal.fire({
+                icon: 'success',
+                title: 'Se creo correctamente la categoria',
+                showConfirmButton: false,
+                timer: 1500
+              }).then(() => {
+                homePage()
+              })
+            }
+          })
+          .catch( (error) => {
+            MySwal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'No se pudo Agregar correctamente!, intenta otro',
+              })
+        });
     }
 
     return(
