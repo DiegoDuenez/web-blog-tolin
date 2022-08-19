@@ -59,15 +59,13 @@ class Blog extends React.Component{
    render(){
     //const {id} = this.props.match.params;
     return(
-        <div className="blog">
+        <div>
             <DocTitle pageTitle={"Blog "  }/>
             <Navbar></Navbar>
             <div className="blog__container">
                 
                 <div className="blog__main">
                     <div className="blog__header">
-                        <div className="blog__user">
-                        </div>
                         <h2><span style={{color: 'var(--verde)'}}>#</span> {this.state.blog.title} </h2> 
                     </div> 
                     <div className="blog__body">
@@ -89,7 +87,6 @@ class Blog extends React.Component{
                             (
                     <div key={data.id}>
                         <div className="comentario">
-                    <div className="comentario__user" ></div>
                     <div className="comentario__contenido">
                         <p className="comentario__username">@{data.user_id} <span className="comentario__text--gray">{data.created_at}</span></p>
                         <p>{data.description}</p>
@@ -102,7 +99,6 @@ class Blog extends React.Component{
                 
 
                 <div className="comentario">
-                    <div className="comentario__user"></div>
                     <div className="comentario__contenido comentario__contenido--end">
                         <textarea className="comentario__textarea" placeholder="Agrega un comentario..."></textarea>
                         <Button  type="submit" classes="button--verde" text="Comentar"/>

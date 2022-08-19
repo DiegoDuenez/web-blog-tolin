@@ -44,6 +44,7 @@ html{
 body{
     position: relative;
     overflow-x: hidden !important;
+    background: white !important;
     /*background-image: url('../img/office.jpg');
     background-position: center;
     background-size: cover;*/
