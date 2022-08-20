@@ -45,6 +45,10 @@
     background-size: cover;
 }
 
+.comentario__container{
+    width: 100% !important;
+}
+
 
 .blog__text--inline{
     display: inline;

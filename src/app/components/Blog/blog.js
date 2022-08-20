@@ -92,7 +92,7 @@ class Blog extends React.Component{
     //const {id} = this.props.match.params;
     return(
         <div className="blog">
-            <DocTitle pageTitle={"Blog "  }/>
+            <DocTitle pageTitle={"Blog "}/>
             <Navbar></Navbar>
             <div className="blog__container">
                 
@@ -114,33 +114,36 @@ class Blog extends React.Component{
                 </div>  
 
                 <h3>Comentarios ({this.state.total})</h3>
-
                 
                 {
 			        this.state.coments.map((data) => 
                             (
-                    <div key={data.id}>
+                    <div key={data.id} className="comentario__container">
                         <div className="comentario">
-                    <div className="comentario__user" ></div>
-                    <div className="comentario__contenido">
-                        <p className="comentario__username">@{data.user_id} <span className="comentario__text--gray">{data.created_at}</span></p>
-                        <p>{data.description}</p>
-                    </div>
-                    </div>
+                            <div className="comentario__user" ></div>
+                            <div className="comentario__contenido">
+                                <p className="comentario__username">@{data.user_id} <span className="comentario__text--gray">{data.created_at}</span></p>
+                                <p>{data.description}</p>
+                            </div>
+                        </div>
                     </div>
  			            )
                         )
                        }
+                {
+                localStorage.getItem('token') ? 
+                <form className="comentario__container" onSubmit={this.handleSubmit}>
+                        <div className="comentario comentario__container">
+                            <div className="comentario__user"></div>
+                            <div className="comentario__contenido comentario__contenido--end">
+                                <textarea className="comentario__textarea" placeholder="Agrega un comentario..." onChange= {this.handleChange}></textarea>
+                                <Button  type="submit" classes="button--verde" text="Comentar"/>
+                            </div>
+                        </div>
                 
-                <form onSubmit={this.handleSubmit}>
-                <div className="comentario">
-                    <div className="comentario__user"></div>
-                    <div className="comentario__contenido comentario__contenido--end">
-                        <textarea className="comentario__textarea" placeholder="Agrega un comentario..." onChange= {this.handleChange}></textarea>
-                        <Button  type="submit" classes="button--verde" text="Comentar"/>
-                    </div>
-                </div>
-                </form>
+                </form> : <h3>Registrate <Link to="/registro">aqui</Link> o logueate <Link to="/login">aqui</Link></h3>
+                }
+                
 
             </div>
             <FloatButton></FloatButton>
