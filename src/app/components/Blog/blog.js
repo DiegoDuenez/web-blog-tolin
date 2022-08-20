@@ -17,22 +17,24 @@ import '../../global/global.css';
 import './blog.css';
 import DocTitle from "../DocTitle/doctitle";
 
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 class Blog extends React.Component{
 
     state = {
         blog: [],
         coments:[],
-        total:[]
+        total:[],
+        coment:''
     }
 
 
     async componentWillMount() {
         const id = this.props.params.id;
-       
         const res = await axios.get('http://127.0.0.1:8000/api/Post/'+id)
         .then((response) => {
-            console.log(response)
+            //console.log(response)
             let array_response = [response.data.PostList];
             this.setState({
                 blog: array_response[0],
@@ -42,19 +44,49 @@ class Blog extends React.Component{
 
         const res2 = await axios.get('http://127.0.0.1:8000/api/post/'+id+'/Comments')
         .then((response) => {
-            console.log(response)
+            //onsole.log(response)
             let array_response = [response.data.CommentsList];
             let totale = [response.data.total]
-            console.log(totale)
+            //console.log(totale)
             this.setState({
                 coments: array_response[0],
                 total: totale[0]
             });
             
           });
-          console.log(this.state.coments)
+
+          
           //console.log(res);
     }  
+
+    handleSubmit = event => {
+        var token = localStorage.getItem('token')
+        event.preventDefault();
+        const id = this.props.params.id;
+        const comentario ={
+            "description":this.state.coment
+        }
+        let axiosConfig = {
+            headers: {
+                'Content-Type': 'application/json;charset=UTF-8',
+                "Access-Control-Allow-Origin": "*",
+            }
+          };
+          
+        console.log(comentario)
+        axios.post('http://127.0.0.1:8000/api/post/'+id+'/Comments/?token='+token,comentario,axiosConfig)
+        .then((response) => {
+            window.location.href = window.location.href;
+          /*console.log(response);
+          console.log(response.data); 
+          console.log(this.state.coment)*/             
+          });
+        //console.log(this.state.coment)
+    }
+
+    handleChange = event =>{
+        this.setState({ coment: event.target.value});
+      }
 
    render(){
     //const {id} = this.props.match.params;
@@ -97,16 +129,14 @@ class Blog extends React.Component{
                         )
                        }
                 
-
+                <form onSubmit={this.handleSubmit}>
                 <div className="comentario">
                     <div className="comentario__contenido comentario__contenido--end">
-                        <textarea className="comentario__textarea" placeholder="Agrega un comentario..."></textarea>
+                        <textarea className="comentario__textarea" placeholder="Agrega un comentario..." onChange= {this.handleChange}></textarea>
                         <Button  type="submit" classes="button--verde" text="Comentar"/>
                     </div>
                 </div>
-
-
-
+                </form>
 
             </div>
             <FloatButton></FloatButton>
