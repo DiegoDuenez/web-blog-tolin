@@ -60,9 +60,9 @@
 }
 
 .comentario{
+    justify-content: center;
     display: flex;
     height: fit-content;
-    border: 1px solid var(--gris-200);
     flex-direction: row;
     align-items: center;
     padding: 1rem;
@@ -86,7 +86,7 @@
 .comentario__contenido{
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     gap: 1rem;
 }
 
@@ -112,12 +112,12 @@
 
 .comentario__textarea{
     outline: none;
-    border: 1px solid var(--gris-100);
+    border: 1px solid gray;
     padding: 1rem;
     border-radius: 5px;
     width: 100%;
     transition: 400ms;
-    height: 5rem;
+    height: auto;
     resize: vertical;
 }
 

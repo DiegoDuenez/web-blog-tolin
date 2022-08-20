@@ -10,6 +10,7 @@
 
 
 .home__scroll{
+    border: 2px solid var(--verde-200);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -17,7 +18,7 @@
     overflow-y: scroll;
     overflow-x: hidden;
     width: 40rem;
-    height: 37rem;
+    height: 32rem;
     padding: 1rem;
     width: 65%;
     background-color: white !important;
@@ -34,7 +35,7 @@
 
 
 .home__container--end{
-    padding-top: 3rem;
+    padding-top: 2rem;
     justify-content: center;
 }
 

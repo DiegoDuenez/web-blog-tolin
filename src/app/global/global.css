@@ -46,6 +46,10 @@ body{
     overflow-x: hidden !important;
     background-color: white !important;
     /*background-image: url !('../img/office.jpg');
+=======
+    background: white !important;
+    /*background-image: url('../img/office.jpg');
+>>>>>>> 3dcb9a4fe07fe58b4cec8ed121a93e1655bdd7fa
     background-position: center;
     background-size: cover;*/
 }
